@@ -5,6 +5,12 @@ A Discord bot for [the SwarmUI Discord](https://discord.gg/q2y38cqjNw) to help p
 
 Open source cause I like open sourcing things, yoink stuff from here if you want or whatever.
 
+## Setup
+
+- make folder `config/`
+    - make file inside `token.txt` with the bot's token
+    - make file instead `config.fds` with config settings
+
 ## License
 
 The MIT License (MIT)
