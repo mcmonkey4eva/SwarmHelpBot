@@ -45,10 +45,7 @@ public class SwarmBot
                     return Task.CompletedTask;
                 };
             },
-            UnknownCommandHandler = (message, cmd) =>
-            {
-                // Ignore
-            },
+            UnknownCommandMessage = null,
             ShouldPayAttentionToMessage = (message) =>
             {
                 return message.Channel is IGuildChannel;
