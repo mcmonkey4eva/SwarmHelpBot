@@ -53,7 +53,7 @@ public class SwarmBot
         });
     }
 
-    public static int CommandVersionId = 1;
+    public static int CommandVersionId = 2;
 
     /// <summary>Registers all applicable slash commands.</summary>
     public async Task RegisterSlashCommands()
@@ -78,6 +78,7 @@ public class SwarmBot
         registerInfoCmd("modelsupport", "Tell a user to check the model support docs.", "AI Image models supported by SwarmUI are documented on [the Model Support doc](<https://github.com/mcmonkeyprojects/SwarmUI/blob/master/docs/Model%20Support.md>), and video models on [the Video Model Support doc](<https://github.com/mcmonkeyprojects/SwarmUI/blob/master/docs/Video%20Model%20Support.md>). These docs should be the first place to check when you're unsure how to use a model.");
         registerInfoCmd("install", "Give a user a link to the install guide.", "If you're new to SwarmUI, you can learn how to install it here: <https://github.com/mcmonkeyprojects/SwarmUI/blob/master/README.md#installing-on-windows> -- pick the category that matches your setup (Windows/Linux/etc), and then make sure to follow the steps listed exactly!");
         registerInfoCmd("license", "Info about the SwarmUI license.", "SwarmUI is 100% free and open source under [The MIT License](<https://github.com/mcmonkeyprojects/SwarmUI/blob/master/LICENSE.txt>). This means you can do whatever you want with it, including for commercial purposes, just don't lie about it or try to sue me about it. See also [the legal notes on dependencies](<https://github.com/mcmonkeyprojects/SwarmUI/blob/master/README.md#legal>) which may affect some usages.\n\nAny images you generate within SwarmUI are your own images, however note that copyright issues may or may not apply depending on the model you used and whether your image resembles pre-existing images.\n\nSome models or extensions may have licenses of their own that apply to your usage.");
+        registerInfoCmd("mindreading", "Inform the user that we can't read minds.", "Remember: Nobody here can read your mind, nor see your screen. We can't help you with issues if we don't have the relevant information.\n\nMake sure you describe the problem you're having in detail, and include logs, screenshots, etc. For example, if the problem happens when generating an image, we'll want at least a link from your **Server**->**Logs**->**Pastebin** button, and a screenshot of your generation parameters.");
         await Bot.Client.BulkOverwriteGlobalApplicationCommandsAsync([.. cmds]);
         Console.WriteLine($"Registered slash commands: {string.Join(", ", cmds.Select(c => c.Name))}");
     }
